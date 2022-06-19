@@ -4,7 +4,7 @@
 # Koden kan på detta vis interagera med svaren på frågor.
 namn = input("Vad heter du?: ")
 
-# Eftersom att det inte går att räkna mattematik med strings måste variabeln "ålder" konverteras till ett int(heltal) eller float(flyttal).
+# Eftersom att det inte går att räkna mattematiska uträkningar med strings måste variabeln "ålder" konverteras till ett int(heltal) eller float(flyttal).
  #int(input) --> string till integer(heltal)
 ålder = int(input("Hur gammal är du?: "))
 ålder = ålder + 1
