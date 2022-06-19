@@ -1,129 +1,30 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+#Lektion 5
 
-# C extensions
-*.so
+# Användar input = genom att skriva svaret av en vis fråga som en variabel kan man sedan använda svaret för att ge output med hjälp av variabeln.
+# Koden kan på detta vis interagera med svaren på frågor.
+namn = input("Vad heter du?: ")
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+# Eftersom att det inte går att räkna mattematik med strings måste variabeln "ålder" konverteras till ett int(heltal) eller float(flyttal).
+ #int(input) --> string till integer(heltal)
+ålder = int(input("Hur gammal är du?: "))
+ålder = ålder + 1
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+# När svaret ska vara exakt och kommer innehålla decimaler används float(flyttal).
+# float(input) --> string till float(flyttal)
+längd = float(input("Hur lång är du?: "))
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# Här kommer svaret ifrån den första frågan "printas" så en mening bildas.
+# Information används för att bilda ett påstående.
+print()
+print("Hej "+namn+"!")
+print()
+print("Du heter väll "+namn+", eller hur?")
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+# Det går inte att "printa" strings(str) tillsammans med integers(str/heltal)
+# Vi måste därav konvertera om "ålder" till en string igen.
+ #str(ålder) --> integer(heltal) till string
+print("Du är "+str(ålder)+" år gammal!")
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+#Som i förra exemplet kommer en konvertering att behövas för att "printa" texten.
+ #str(längd) --> float(flyttal) till string
+print("Du är "+str(längd)+" cm lång!")
